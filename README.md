@@ -154,5 +154,17 @@
   Then go to <http://localhost:3000/about>
 </details>
 
+<details>
+  <summary>Create with a style</summary>
+
+  ##### Create new project with CTA
+  ```bash
+  pnpx create-tsrouter-app cta-app-with-style --template file-router --tailwind
+  cd cta-app-with-style
+  pnpm start
+  ```
+  Then go to <http://localhost:3000>
+</details>
+
 ## Reference
 <https://www.youtube.com/watch?v=10J6RyMOxN0>
