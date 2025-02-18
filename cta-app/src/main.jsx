@@ -29,7 +29,13 @@ const indexRoute = createRoute({
   component: App,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute]);
+const aboutRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/about",
+  component: () => <div>About Route</div>,
+});
+
+const routeTree = rootRoute.addChildren([indexRoute, aboutRoute]);
 
 const router = createRouter({
   routeTree,

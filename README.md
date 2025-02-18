@@ -97,5 +97,40 @@
   ```
 </details>
 
+<details>
+  <summary>Add Route</summary>
+
+  ##### CRA
+  ```bash
+
+  ```
+  ```bash
+
+  ```
+  ##### CTA clone `about` from `index`
+  ```bash
+  nano src/main.jsx
+  ```
+  ```bash
+  ...
+  const indexRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/",
+    component: App,
+  });
+
+  const aboutRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/about",
+    component: () => <div>About Route</div>,
+  });
+
+  # const routeTree = rootRoute.addChildren([indexRoute]);
+  const routeTree = rootRoute.addChildren([indexRoute, aboutRoute]);
+  ...
+  ```
+  Then go to <http://localhost:3000/about>
+</details>
+
 ## Reference
 <https://www.youtube.com/watch?v=10J6RyMOxN0>
