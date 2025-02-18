@@ -3,6 +3,8 @@
     CRA is `create-react-app`
     CTA is `create-tsrouter-app`
 
+## First look compare
+
 <details>
   <summary>Create project</summary>
 
@@ -96,6 +98,8 @@
   export default App;
   ```
 </details>
+
+## CTA Section
 
 <details>
   <summary>Add Route</summary>
