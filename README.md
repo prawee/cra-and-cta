@@ -130,8 +130,8 @@
 
   ##### Create new project with CTA
   ```bash
-  pnpx create-tsrouter-app cta-file-app --template file-router
-  cd cta-file-app
+  pnpx create-tsrouter-app cta-app-with-template --template file-router
+  cd cta-app-with-template
   pnpm start
   ```
   Then go to <http://localhost:3000>
