@@ -99,14 +99,7 @@
 
 <details>
   <summary>Add Route</summary>
-
-  ##### CRA
-  ```bash
-
-  ```
-  ```bash
-
-  ```
+  
   ##### CTA clone `about` from `index`
   ```bash
   nano src/main.jsx
@@ -128,6 +121,35 @@
   # const routeTree = rootRoute.addChildren([indexRoute]);
   const routeTree = rootRoute.addChildren([indexRoute, aboutRoute]);
   ...
+  ```
+  Then go to <http://localhost:3000/about>
+</details>
+
+<details>
+  <summary>Create with a template</summary>
+
+  ##### Create new project with CTA
+  ```bash
+  pnpx create-tsrouter-app cta-file-app --template file-router
+  cd cta-file-app
+  pnpm start
+  ```
+  Then go to <http://localhost:3000>
+
+  ##### Add new route
+  ```bash
+  nano src/routes/about.tsx
+  ```
+  ```bash
+  import { createFileRoute } from "@tanstack/react-router";
+
+  export const Route = createFileRoute("/about")({
+      component: RouteComponent,
+  });
+
+  function RouteComponent() {
+      return <div>About</div>;
+  }
   ```
   Then go to <http://localhost:3000/about>
 </details>
